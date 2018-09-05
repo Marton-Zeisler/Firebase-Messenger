@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B7DC3AB2140968600157080 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B7DC3AA2140968500157080 /* GoogleService-Info.plist */; };
 		3B9462F0213861B700C0CB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9462EF213861B700C0CB9D /* AppDelegate.swift */; };
 		3B9462F2213861B700C0CB9D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9462F1213861B700C0CB9D /* LoginVC.swift */; };
 		3B9462F5213861B700C0CB9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9462F3213861B700C0CB9D /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B7DC3AA2140968500157080 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B9462EC213861B700C0CB9D /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9462EF213861B700C0CB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B9462F1213861B700C0CB9D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				3B9462F6213861B900C0CB9D /* Assets.xcassets */,
 				3B9462F8213861B900C0CB9D /* LaunchScreen.storyboard */,
 				3B9462FB213861B900C0CB9D /* Info.plist */,
+				3B7DC3AA2140968500157080 /* GoogleService-Info.plist */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B9462FA213861B900C0CB9D /* LaunchScreen.storyboard in Resources */,
+				3B7DC3AB2140968600157080 /* GoogleService-Info.plist in Resources */,
 				3B9462F7213861B900C0CB9D /* Assets.xcassets in Resources */,
 				3B9462F5213861B700C0CB9D /* Main.storyboard in Resources */,
 			);
