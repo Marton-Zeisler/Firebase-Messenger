@@ -78,8 +78,11 @@ class SelectPeopleVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @objc func doneTapped(_ button: UIBarButtonItem){
-        if selectedUserIndexes.count > 0 {
-            
+        // No group chat support yet
+        if selectedUserIndexes.count == 1 {
+            let chatVC = storyboard?.instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
+            chatVC.receiver = users[selectedUserIndexes[0]]
+            self.navigationController?.pushViewController(chatVC, animated: true)
         }else{
             let alertVC = UIAlertController(title: "Select a person", message: "Select at least 1 person from the list to start a chat!", preferredStyle: .alert)
             alertVC.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))

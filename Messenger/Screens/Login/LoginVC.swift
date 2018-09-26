@@ -127,11 +127,14 @@ class LoginVC: UIViewController, UITextFieldDelegate, UINavigationControllerDele
         present(actionSheetVC, animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         picker.dismiss(animated: true, completion: nil)
         UIApplication.shared.statusBarStyle = .lightContent
         
-        guard let image = info[UIImagePickerControllerEditedImage] as? UIImage else { return }
+        guard let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage)] as? UIImage else { return }
         imageButton.setImage(image, for: .normal)
     }
     
@@ -155,7 +158,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UINavigationControllerDele
     
     func setIndicatorVisible(_ bool: Bool){
         if bool{
-            indicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+            indicatorView = UIActivityIndicatorView(style: .whiteLarge)
             indicatorView?.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3483164613)
             indicatorView?.frame = view.frame
             view.addSubview(indicatorView!)
@@ -226,3 +229,13 @@ class LoginVC: UIViewController, UITextFieldDelegate, UINavigationControllerDele
 
 
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
+}

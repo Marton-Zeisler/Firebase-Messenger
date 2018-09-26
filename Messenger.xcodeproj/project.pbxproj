@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2B644B215AEA2C00E72285 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2B644A215AEA2C00E72285 /* HomeCell.swift */; };
+		3B2B644D215AEB2F00E72285 /* HomeChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2B644C215AEB2F00E72285 /* HomeChat.swift */; };
+		3B67A2AD2158390F00F9CB5E /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A2AC2158390F00F9CB5E /* ChatVC.swift */; };
+		3B67A2AF2158427F00F9CB5E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B67A2AE2158427F00F9CB5E /* Message.swift */; };
 		3B7DC3AB2140968600157080 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B7DC3AA2140968500157080 /* GoogleService-Info.plist */; };
 		3B9462F0213861B700C0CB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9462EF213861B700C0CB9D /* AppDelegate.swift */; };
 		3B9462F2213861B700C0CB9D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9462F1213861B700C0CB9D /* LoginVC.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B2B644A215AEA2C00E72285 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		3B2B644C215AEB2F00E72285 /* HomeChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChat.swift; sourceTree = "<group>"; };
+		3B67A2AC2158390F00F9CB5E /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		3B67A2AE2158427F00F9CB5E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		3B7DC3AA2140968500157080 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B9462EC213861B700C0CB9D /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9462EF213861B700C0CB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +72,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3B67A2AB215838FE00F9CB5E /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				3B67A2AC2158390F00F9CB5E /* ChatVC.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		3B9462E3213861B600C0CB9D = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +118,7 @@
 		3BB64C6221397B7E00A8D4E3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3B67A2AB215838FE00F9CB5E /* Chat */,
 				3BB64C6521397BB000A8D4E3 /* Compose Selection */,
 				3BB64C6421397B8D00A8D4E3 /* Home */,
 				3BB64C6321397B8600A8D4E3 /* Login */,
@@ -121,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				3BB64C5E21395FBD00A8D4E3 /* MessagesVC.swift */,
+				3B2B644A215AEA2C00E72285 /* HomeCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -138,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				3BB64C6A21397D1C00A8D4E3 /* User.swift */,
+				3B67A2AE2158427F00F9CB5E /* Message.swift */,
+				3B2B644C215AEB2F00E72285 /* HomeChat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +214,7 @@
 				TargetAttributes = {
 					3B9462EB213861B700C0CB9D = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -239,6 +260,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Messenger/Pods-Messenger-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -246,6 +268,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -283,10 +306,14 @@
 				3B9462F2213861B700C0CB9D /* LoginVC.swift in Sources */,
 				3B94630221386B3C00C0CB9D /* Extensions.swift in Sources */,
 				3B9462F0213861B700C0CB9D /* AppDelegate.swift in Sources */,
+				3B67A2AD2158390F00F9CB5E /* ChatVC.swift in Sources */,
 				3B946306213899B900C0CB9D /* AuthService.swift in Sources */,
+				3B67A2AF2158427F00F9CB5E /* Message.swift in Sources */,
+				3B2B644D215AEB2F00E72285 /* HomeChat.swift in Sources */,
 				3BB64C6B21397D1C00A8D4E3 /* User.swift in Sources */,
 				3BB64C612139787200A8D4E3 /* SelectPeopleVC.swift in Sources */,
 				3BB64C6721397BD600A8D4E3 /* SelectPeopleCell.swift in Sources */,
+				3B2B644B215AEA2C00E72285 /* HomeCell.swift in Sources */,
 				3B946308213899C500C0CB9D /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marton.appstore.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -460,7 +487,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marton.appstore.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
